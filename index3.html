@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .clearfix::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+
+        .container {
+            background-color: antiquewhite;
+            width: 100%;
+        }
+
+        .container .col-1 {
+            width: 300px;
+            background-color: aqua;
+            float: left;
+        }
+
+        .container .col-2 {
+            width: 500px;
+            background-color: blueviolet;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        float : trôi 
+        float có 3 giá trị 
+        float:left; trôi sang trái
+        float:right; trôi sang phải
+        float:none; không trôi 
+    </pre>
+
+    <div class="container clearfix">
+        <div class="col-1">
+            <h2>cột trái</h2>  
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique cum officia dolorem voluptatem voluptas. Corrupti, vitae dolores, quam dolor, tenetur iusto inventore praesentium nisi harum totam quasi natus itaque reprehenderit?</p>
+        </div>
+
+        <div class="col-2">
+            <h2>cột phải</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, blanditiis. Maiores aut placeat vitae optio itaque sit suscipit, ipsam illum dolore, corrupti delectus porro! Neque eos accusamus nihil excepturi ullam?</p>
+        </div>
+
+    </div>
+
+    <pre>
+        khi thẻ cha chứa thẻ con 
+        nếu thẻ con được float trái hay phải 
+        và đồng thời thẻ cha không sử dụng thuộc tính height cụ thể 
+        thì thẻ con sẽ bị trượt khỏi thẻ cha hay nói khác là 
+        thẻ cha ko chứa được thẻ con và thẻ cha có chiều cao là 0px 
+        để tránh hiện tượng ko mong muốn này 
+        -> giải pháp 
+        giải pháp 1 : đặt cho thẻ cha 1 chiều cao height cụ thể (nhược điểm khi chiều cao thẻ con thay đổi thì thẻ cha ko thay đổi theo )
+        giải pháp 2 : sử dụng clearfix
+        .clearfix::after 
+        ::after thêm ::after vào trước thẻ đóng của thẻ có class là clearfix 
+        không nhìn thấy trong phần hiển thị ( nên dùng cách clearfix )
+        thêm class clearfix cho thẻ cha trong phần html 
+        
+    </pre>
+</body>
+</html>
