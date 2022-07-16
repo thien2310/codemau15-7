@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            background-color: aqua;
+            width: 100%;
+        }
+        .container .child {
+            background-color: antiquewhite;
+            width: 300px;
+            height: 300px;
+            float: right;
+        }
+        .container p {
+            background-color: blueviolet;
+            clear: right;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="child">
+            Nội dung của thẻ child
+        </div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ut, hic totam ab quisquam quod ex dolores. Velit officia blanditiis repudiandae iusto sint, ipsam, aperiam iure vel eligendi pariatur quos.</p>
+    </div>
+
+    <pre>
+        có 2 thẻ A và B nằm cạnh nhau 
+        nếu cho thẻ A float sang trái hay sang phải 
+        thì thẻ A kéo nội dung của thẻ B chạy lên bên trên
+        -> nếu không muốn thẻ B bị ảnh hưởng khi thẻ A float trái hay phải 
+        thì sẽ làm thế nào ?
+        sử dụng thuộc tính clear cho thẻ B 
+        clear: left;
+        clear: right; 
+        clear: both;  
+        ví dụ 1 :
+        thẻ A float:left; nếu muốn thẻ B ko bị ảnh hưởng clear: left;
+        thẻ A float:right; nếu muốn thẻ B ko bị ảnh hưởng clear: right;
+        nếu ko biết thẻ A bị float:left hay right thì chúng ta dùng clear:both cho thẻ B có nghĩa là thẻ B sẽ được chống kéo lên theo 2 hướng 
+    </pre>
+</body>
+</html>
